@@ -1,4 +1,4 @@
-<script setup lang="ts" name="personRename">
+<script setup lang="ts" name="personRename">/*重命名插件*/
 import {ref} from 'vue'
 
 let name = ref('bbb');

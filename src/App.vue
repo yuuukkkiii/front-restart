@@ -1,9 +1,10 @@
 <script lang="ts">
 import Person from "./components/Person.vue";
+import Car from "./components/Car.vue";
 
 export default {
   name: 'App',
-  components: {Person} //注册组件
+  components: {Person,Car} //注册组件
 }
 // import HelloWorld from './components/HelloWorld.vue'
 
@@ -11,6 +12,7 @@ export default {
 
 <template>
   <Person/>
+  <Car/>
 </template>
 
 <style scoped>
