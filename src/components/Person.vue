@@ -1,10 +1,4 @@
-<script lang="ts">
-export default {
-  name: 'Person',//控制组件名
-}
-</script>
-
-<script setup lang="ts">
+<script setup lang="ts" name="personRename">
 let name = 'bbb'; /*这种写法不是响应式的*/
 let age = 19;
 let tel = 120;
