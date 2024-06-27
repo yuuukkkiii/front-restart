@@ -1,15 +1,17 @@
 <script setup lang="ts" name="personRename">
-let name = 'bbb'; /*这种写法不是响应式的*/
-let age = 19;
-let tel = 120;
+import {ref} from 'vue'
+
+let name = ref('bbb');
+let age = ref(19);
+let tel = 120;  /*这种写法不是响应式的*/
 let address = '芦荡路228号';
 
 function changeName() {
-  name = 'aaa';
+  name.value = 'aaa';
 }
 
 function changeAge() {
-  age += 1;
+  age.value += 1;
 }
 
 function showTel() {
