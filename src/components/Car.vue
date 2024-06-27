@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">/*重命名插件*/
-import {reactive, ref} from "vue";
+import {reactive} from "vue";
 
 let car = reactive({brand: '奔驰', price: 100});//原对象，响应式对象，proxy包裹
 let games = reactive([
