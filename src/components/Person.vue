@@ -1,23 +1,25 @@
 <script lang="ts">
 export default {
   name: 'Person',
-  data() {
-    return {
-      name: 'zzz',
-      age: 18,
-      tel: '110'
+  setup() {
+    let name = 'bbb'; /*这种写法不是响应式的*/
+    let age = 19;
+    let tel = 120;
+
+    function changeName() {
+      name = 'aaa';
     }
-  },
-  methods: {
-    showTel() {
-      alert(this.tel)
-    },
-    changeName() {
-      this.name = 'aaa'
-    },
-    changeAge() {
-      this.age++
+
+    function changeAge() {
+      age += 1;
     }
+
+    function showTel() {
+      alert(tel);
+    }
+
+    return {name, age, changeName, changeAge, showTel}
+    // return ()=>'hello world!'
   }
 }
 </script>
