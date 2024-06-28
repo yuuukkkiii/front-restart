@@ -8,40 +8,40 @@
       <li v-for="game in games" :key="game.id">{{ game.name }}</li>
     </ul>
     <button @click="changeGameName">修改第一个游戏的名字</button>
-    <hr/>
-    <h2>测试：{{ obj.a.b.c }}</h2>
-    <button @click="changeDeep">修改对象内对象数值</button>
+<!--    <hr/>-->
+<!--    <h2>测试：{{ obj.a.b.c }}</h2>-->
+<!--    <button @click="changeDeep">修改对象内对象数值</button>-->
   </div>
 </template>
 
 <script setup lang="ts">/*重命名插件*/
-import {reactive} from "vue";
+import {reactive,ref} from "vue";
 
-let car = reactive({brand: '奔驰', price: 100});//原对象，响应式对象，proxy包裹
-let games = reactive([
+let car = ref({brand: '奔驰', price: 100});//原对象，响应式对象，proxy包裹
+let games = ref([
   {id: '1', name: '水解密'},
   {id: '2', name: '贪吃蛇'},
   {id: '3', name: '扫雷'},
 ]);
-let obj = reactive({
-  a: {
-    b: {
-      c: 111
-    }
-  }
-});//多层级的对象也能转换为响应式
+// let obj = reactive({
+//   a: {
+//     b: {
+//       c: 111
+//     }
+//   }
+// });//多层级的对象也能转换为响应式
 
 function changePrice() {
-  car.price--;
+  car.value.price--;
 }
 
 function changeGameName() {
-  games[0].name = '原神'
+  games.value[0].name = '原神'
 }
 
-function changeDeep() {
-  obj.a.b.c = 222
-}
+// function changeDeep() {
+//   obj.a.b.c = 222
+// }
 </script>
 
 
