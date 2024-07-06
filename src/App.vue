@@ -1,10 +1,11 @@
 <script lang="ts">
 import Person1 from "./components/Person1.vue";
 import PersonComputed from "./components/PersonComputed.vue";
+import PersonWatch from "./components/PersonWatch.vue";
 
 export default {
   name: 'App',
-  components: {Person1,PersonComputed} //注册组件
+  components: {Person1,PersonComputed,PersonWatch} //注册组件
 }
 // import HelloWorld from './components/HelloWorld.vue'
 
@@ -13,7 +14,8 @@ export default {
 <template>
 <!--  <Person/>-->
 <!--  <Car/>-->
-  <PersonComputed/>
+<!--  <PersonComputed/>-->
+  <PersonWatch/>
 <!--  <Person1/>-->
 </template>
 
