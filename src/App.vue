@@ -1,11 +1,9 @@
 <script lang="ts">
-import Person1 from "./components/Person1.vue";
-import PersonComputed from "./components/PersonComputed.vue";
-import PersonWatch from "./components/PersonWatch.vue";
+import WatchRefObject from "./components/WatchRefObject.vue";
 
 export default {
   name: 'App',
-  components: {Person1,PersonComputed,PersonWatch} //注册组件
+  components: {WatchRefObject} //注册组件
 }
 // import HelloWorld from './components/HelloWorld.vue'
 
@@ -15,8 +13,9 @@ export default {
 <!--  <Person/>-->
 <!--  <Car/>-->
 <!--  <PersonComputed/>-->
-  <PersonWatch/>
+<!--  <PersonWatch/>-->
 <!--  <Person1/>-->
+  <WatchRefObject/>
 </template>
 
 <style scoped>
