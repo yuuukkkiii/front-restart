@@ -17,7 +17,7 @@ export default {
 <!--  <PersonWatch/>-->
   <PersonAttribution/>
 <!--  <Person1/>-->
-  <WatchRefObject/>
+<!--  <WatchRefObject/>-->
 </template>
 
 <style scoped>
