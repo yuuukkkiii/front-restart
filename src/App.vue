@@ -1,10 +1,11 @@
 <script lang="ts">
-import WatchRefObject from "./components/WatchRefObject.vue";
-import PersonAttribution from "./components/PersonAttribution.vue";
+import WatchRefObject from "./components/base/WatchRefObject.vue";
+import PersonAttribution from "./components/base/PersonAttribution.vue";
+import WatchEffect from "./components/base/WatchEffect.vue";
 
 export default {
   name: 'App',
-  components: {WatchRefObject,PersonAttribution} //注册组件
+  components: {WatchRefObject,PersonAttribution,WatchEffect} //注册组件
 }
 // import HelloWorld from './components/HelloWorld.vue'
 
@@ -15,9 +16,10 @@ export default {
 <!--  <Car/>-->
 <!--  <PersonComputed/>-->
 <!--  <PersonWatch/>-->
-  <PersonAttribution/>
+<!--  <PersonAttribution/>-->
 <!--  <Person1/>-->
 <!--  <WatchRefObject/>-->
+  <WatchEffect/>
 </template>
 
 <style scoped>
