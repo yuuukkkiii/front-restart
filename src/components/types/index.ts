@@ -2,8 +2,10 @@
 export interface PersonInter {
     id: string,
     name: string,
-    age: number
+    age: number,
+    x?: number
 }
+
 // 定义一个自定义类型
 export type Persons = Array<PersonInter>
 
