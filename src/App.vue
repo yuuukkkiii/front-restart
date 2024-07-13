@@ -5,6 +5,7 @@ import {onBeforeMount, onMounted, reactive, ref} from "vue";
 import {type Persons} from "./components/types";
 import PersonProps from "./components/base/PersonProps.vue";
 import LifeCycle from "./components/life-cycle/LifeCycle.vue";
+import HooksTest from "./components/life-cycle/HooksTest.vue";
 
 let isShow = ref(true);
 let personList = reactive<Persons>([
@@ -39,7 +40,8 @@ onMounted(() => {
   <!--  ref放在自定义标签上，拿到的是组件的实例对象-->
   <!--  <LabelRef ref="la"/>-->
 <!--  <PersonProps a="hahaha" b="xxxx" :list="personList"/>-->
-  <LifeCycle v-if ="isShow"/>
+<!--  <LifeCycle v-if ="isShow"/>-->
+  <HooksTest/>
 </template>
 
 <style scoped>
