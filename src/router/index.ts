@@ -11,12 +11,15 @@ import News from "../views/News.vue";
 const router = createRouter({
     history: createWebHistory(),//路由器的工作模式
     routes: [{
+        name:'home',
         path: '/home',
         component: Home
     }, {
+        name:'news',
         path: '/news',
         component: News
     }, {
+        name:'about',
         path: '/about',
         component: About
     }]
