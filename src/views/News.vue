@@ -23,8 +23,14 @@
             id:news.id,
             title:news.title,
             content:news.content
-          }
-          }">{{ news.title }}</RouterLink>
+          },
+          query:{
+            id:news.id,
+            title:news.title,
+            content:news.content
+        }
+          }">{{ news.title }}
+        </RouterLink>
       </li>
     </ul>
     <div class="news-content">

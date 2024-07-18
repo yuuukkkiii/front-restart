@@ -23,8 +23,14 @@ const router = createRouter({
         children: [
             {
                 name:'paramsDetail',
-                path: 'detail/:id/:title/:content',
-                component: DetailUseParams
+                path: 'detail',
+                component: Detail,
+                // 第一种写法，传递params参数
+                // props:true
+                // 第二种写法,props($) 参数为route
+                props(route){
+                    return route.query
+                }
             }
         ]
     }, {
