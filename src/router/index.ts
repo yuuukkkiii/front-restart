@@ -7,6 +7,7 @@ import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import News from "../views/News.vue";
 import Detail from "../views/Detail.vue";
+import DetailUseParams from "../views/DetailUseParams.vue";
 
 //2：创建路由器
 const router = createRouter({
@@ -21,8 +22,9 @@ const router = createRouter({
         component: News,
         children: [
             {
-                path: 'detail',
-                component: Detail
+                name:'paramsDetail',
+                path: 'detail/:id/:title/:content',
+                component: DetailUseParams
             }
         ]
     }, {
