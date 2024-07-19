@@ -2,6 +2,7 @@
   <div class="news">
     <ul>
       <li v-for="news in newsList" :key="news.id">
+        <button @click="showNewsDetail(news)">查看新闻</button>
         <!--        query 第一种写法,直接拼字符串-->
         <!--        <RouterLink :to="`/news/detail?id=${news.id}&title=${news.title}&content=${news.content}`">{{ news.title }}</RouterLink>-->
         <!--        query 第二种写法，写对象-->
@@ -41,13 +42,35 @@
 
 <script setup lang="ts" name="News">
 import {reactive} from "vue";
+import {useRouter} from "vue-router";
 
-const newsList = reactive([
+const router = useRouter()
+
+interface NewsInter {
+  id: string,
+  title: string,
+  content: string
+}
+
+const newsList:Array<NewsInter> = reactive([
   {id: 1, title: '特没谱枪击案', content: '特没谱被枪击身亡'},
   {id: 2, title: '如何暴富', content: '听主任的话，去刮彩票'},
   {id: 3, title: '震惊，一男子竟', content: '刮彩票赔钱，买基金回本'},
   {id: 4, title: '好消息', content: '好消息，特大好消息'}
 ])
+
+
+
+function showNewsDetail(news: NewsInter) {
+  router.push({
+    name: 'paramsDetail',
+    params: {
+      id: news.id,
+      title: news.title,
+      content: news.content
+    }
+  })
+}
 </script>
 
 <style scoped>

@@ -5,7 +5,16 @@
 </template>
 
 <script setup lang="ts" name="Home">
+import {onMounted} from "vue";
+import {useRouter} from "vue-router";
 
+const  router = useRouter();
+onMounted(() => {
+  setTimeout(() => {
+    // 编写代码，使页面实现路由跳转
+    router.push('/news');
+  }, 3000)
+})
 </script>
 
 <style scoped>
